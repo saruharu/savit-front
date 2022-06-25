@@ -1,0 +1,78 @@
+
+<div class="row topbarDiv">
+    <img src="assets/logo-savit-red.png" class="app-logo" [routerLink]="['/home']">
+
+    <ng-container *ngFor="let link of topbarList">
+        <p routerLink="{{link.getRoute()}}" routerLinkActive="is-active" class="route-link">{{link.getLabel()}}</p>
+    </ng-container>
+
+    <span class="app-spacer"></span>
+    <ng-container *ngIf="!isLoggedIn">
+        <p class="login-button" (click)="onLoginButton()">Login</p>
+        <button mat-raised-button (click)="onSignupButton()">Sign up</button>
+    </ng-container>
+    
+    <ng-container *ngIf="isLoggedIn">
+      <button mat-icon-button [matMenuTriggerFor]="notifMenu" *ngIf="isLoggedIn">
+        <mat-icon>notifications</mat-icon>
+      </button>
+      <mat-menu #notifMenu="matMenu">
+        <button mat-menu-item>Notif1</button>
+      </mat-menu>
+
+      <button mat-icon-button [matMenuTriggerFor]="userMenu" *ngIf="isLoggedIn">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #userMenu="matMenu">
+        <button mat-menu-item routerLink="profile">Profile: {{username}}</button>
+        <button mat-menu-item>My Orders</button>
+        <button mat-menu-item (click)="logout()">Log Out</button>
+      </mat-menu>
+    </ng-container>
+
+    
+
+</div>
+
+
+<!--
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">Savit-Food-Logo</a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item" *ngFor="let link of topbarList">
+        <a routerLink="{{link.getRoute()}}" class="nav-link">{{link.getLabel()}}</a>
+      </li>
+    </ul>
+
+    <span class="app-spacer"></span>
+
+    
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul>
+
+
+    <button mat-icon-button [matMenuTriggerFor]="notifMenu" *ngIf="isLoggedIn">
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <mat-menu #notifMenu="matMenu">
+      <button mat-menu-item>Notif1</button>
+    </mat-menu>
+
+    <button mat-icon-button [matMenuTriggerFor]="userMenu" *ngIf="isLoggedIn">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item routerLink="profile">Profile: {{username}}</button>
+      <button mat-menu-item>My Orders</button>
+      <button mat-menu-item (click)="logout()">Log Out</button>
+    </mat-menu>
+
+
+  </nav>
+  -->

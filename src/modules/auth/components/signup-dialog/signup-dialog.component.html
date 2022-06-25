@@ -1,0 +1,41 @@
+
+<form class="signup-form" [formGroup]="signupForm" (ngSubmit)="onSignupSubmit()" #form="ngForm">
+  <mat-form-field>
+    <mat-label>Username</mat-label>
+    <input matInput type="mail" formControlName="username">
+  </mat-form-field>
+
+<!--
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput type="text" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Phone number</mat-label>
+    <input matInput type="phone" formControlName="phonenumber">
+  </mat-form-field>
+-->
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput type="password" formControlName="password">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Confirm Password</mat-label>
+    <input matInput type="password" formControlName="confirmPassword" pattern="^\S{6,}$">
+  </mat-form-field>
+
+
+  <button mat-raised-button color="success" type="submit">Sign Up</button>
+
+</form>
+
+<div class="alert alert-warning" *ngIf="form.submitted && isSignUpFailed">
+  Signup failed!<br />{{ errorMessage }}
+</div>

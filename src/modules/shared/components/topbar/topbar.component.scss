@@ -1,0 +1,60 @@
+.topbarDiv{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    background: #FFFFFF;
+    padding-right: 5px;
+    padding-left: 5px;
+
+}
+
+.route-link{
+    height: fit-content;
+    margin-bottom: 0px;
+    cursor: pointer;
+    margin-right: 65px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 29px;
+
+    color: #000;
+}
+
+.app-spacer{
+    display: flex;
+    flex: 1px;
+}
+
+.is-active{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 39px;
+    /* identical to box height */
+    color: #FFC530;
+    
+    
+}
+
+.app-logo{
+    width: 193px;
+    margin-right: 28px;
+}
+
+
+.login-button{
+    cursor: pointer;
+    color: #000;
+    margin-bottom: 0px;
+    margin-right: 5px;
+}
+
+.logout-button{
+    cursor: pointer;
+    color: #000;
+    margin-bottom: 0px;
+    margin-right: 5px;   
+}

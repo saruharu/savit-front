@@ -1,0 +1,22 @@
+
+<form class="login-form" [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()" #form="ngForm">
+  <mat-form-field>
+    <mat-label>Username</mat-label>
+    <input matInput type="text" formControlName="username">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput type="password" formControlName="password">
+  </mat-form-field>
+
+  <button mat-raised-button color="success" type="submit">Log in</button>
+
+</form>
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="form.submitted && isLoginFailed"
+        >
+          Login failed: {{ errorMessage }}
+        </div>
