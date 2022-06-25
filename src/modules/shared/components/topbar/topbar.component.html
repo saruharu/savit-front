@@ -3,7 +3,7 @@
     <img src="assets/logo-savit-red.png" class="app-logo" [routerLink]="['/home']">
 
     <ng-container *ngFor="let link of topbarList">
-        <p routerLink="{{link.getRoute()}}" routerLinkActive="is-active" class="route-link">{{link.getLabel()}}</p>
+        <p routerLink="{{link.getRoute()}}" routerLinkActive="is-active" class="route-link">{{link.getLabel() | uppercase}}</p>
     </ng-container>
 
     <span class="app-spacer"></span>

@@ -5,6 +5,7 @@
     background: #FFFFFF;
     padding-right: 5px;
     padding-left: 5px;
+    border-bottom: 1px solid #d4242c;
 
 }
 
@@ -20,6 +21,8 @@
     line-height: 29px;
 
     color: #000;
+    font-size: 12px;
+
 }
 
 .app-spacer{
@@ -41,7 +44,8 @@
 
 .app-logo{
     width: 193px;
-    margin-right: 28px;
+    margin-right: 340px;
+    cursor: pointer;
 }
 
 

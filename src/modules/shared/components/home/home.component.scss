@@ -1,5 +1,42 @@
-.container{
+.containerr{
     width: 100vw;
-    background-color: red;
-    height: 80vh;
+    background-color: #d4242c;
+    height: 200px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 94px;
+}
+
+.app-logo{
+    width: 193px;
+    bottom: 22px;
+    position: absolute;
+    transform: scale(1.5);
+    right: 571px;
+}
+
+.user-buttons-div{
+    width: 180px;
+
+}
+
+.login-button{
+    background-color: #d4242c;
+    color: white;
+    border-radius: 24px;
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.register-button{
+    color: #d4242c;
+    border:1px solid #d4242c;
+    border-radius: 24px;
+    width: 180px;
+}
+
+.savit-intro-text{
+    text-align: center;
+    width: 255px;
+    color: grey;
 }

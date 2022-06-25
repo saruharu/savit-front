@@ -10,7 +10,7 @@ import { UserService } from 'src/modules/auth/services';
 export class HomeComponent implements OnInit {
 
   constructor(private titleService: Title, private userService: UserService) {
-    this.titleService.setTitle("About Us")
+    this.titleService.setTitle("Savit")
   }
 
 
